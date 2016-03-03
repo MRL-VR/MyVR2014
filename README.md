@@ -12,7 +12,7 @@ This application is based on C# language programming.
 	(https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/slimdx/SlimDX%20SDK%20(January%202012).msi)
 * USARSim UDK
 	(https://github.com/hrnr/robocup-usarsim)
-*WSS
+* WSS
 	(https://github.com/hrnr/robocup-usarsim/tree/master/USARTools/WSS)
 	
 ### Software Environment Installation Tips  
