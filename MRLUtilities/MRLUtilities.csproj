@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD78D370-8C40-45DF-ADA4-6D509D7ABBAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MRL</RootNamespace>
+    <AssemblyName>MRL.Utilities</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.0.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=1.1.0.0, Culture=neutral, PublicKeyToken=d604c8342bbdeba9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.1.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="C5, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\C5.dll</HintPath>
+    </Reference>
+    <Reference Include="ClipperLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\ClipperLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Iridium, Version=2007.3.8.43060, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\MathNet.Iridium.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=2011.4.17.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="SlimDX, Version=4.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=AMD64">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\Joystick\AirRobotCmd.cs" />
+    <Compile Include="Command\Joystick\CmdGenerator.cs" />
+    <Compile Include="Command\Joystick\KenafCmd.cs" />
+    <Compile Include="Command\Joystick\P3ATCmd.cs" />
+    <Compile Include="Commons\CamView.cs" />
+    <Compile Include="Commons\Commons.cs" />
+    <Compile Include="Commons\DPoint.cs" />
+    <Compile Include="Commons\DrawState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commons\Tree\GNode.cs" />
+    <Compile Include="Commons\Tree\GTree.cs" />
+    <Compile Include="Commons\ILaserRangeData.cs" />
+    <Compile Include="Commons\Index.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commons\JoyStickController.cs" />
+    <Compile Include="Commons\Tree\Arithmetic.cs" />
+    <Compile Include="Commons\Tree\KdTree.cs" />
+    <Compile Include="Commons\Tree\KdTreeNode.cs" />
+    <Compile Include="Commons\KeyBoardController.cs" />
+    <Compile Include="Commons\PathFinderNode.cs" />
+    <Compile Include="Commons\PilotJoyStickController.cs" />
+    <Compile Include="Commons\QuadTree.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commons\RegisteryController.cs" />
+    <Compile Include="Communication\External Commands\IMU.cs" />
+    <Compile Include="Communication\Internal Objects\AutonomousChange.cs" />
+    <Compile Include="Communication\Internal Objects\BaseObject.cs" />
+    <Compile Include="Communication\Internal Objects\Camera.cs" />
+    <Compile Include="Communication\Internal Objects\CommGraph.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Command\Drive\AbstractDrive.cs" />
+    <Compile Include="Command\Drive\AirBot.cs" />
+    <Compile Include="Command\Drive\FourWheeled.cs" />
+    <Compile Include="Command\Drive\Kenaf.cs" />
+    <Compile Include="Communication\Internal Objects\Battery.cs" />
+    <Compile Include="Communication\Internal Objects\Drive.cs" />
+    <Compile Include="Communication\Internal Objects\FrontierList.cs" />
+    <Compile Include="Communication\Internal Objects\ImageServer.cs" />
+    <Compile Include="Communication\Internal Objects\IMNode.cs" />
+    <Compile Include="Communication\Internal Objects\JoyStickData.cs" />
+    <Compile Include="Communication\Internal Objects\Position3D.cs" />
+    <Compile Include="Communication\Internal Objects\PressedKeys.cs" />
+    <Compile Include="Communication\Internal Objects\RangeScan.cs" />
+    <Compile Include="Communication\Internal Objects\Mission.cs" />
+    <Compile Include="Communication\Internal Objects\PortInfo.cs" />
+    <Compile Include="Communication\Internal Objects\RequestGraph.cs" />
+    <Compile Include="Communication\Internal Objects\RoutedMessage.cs" />
+    <Compile Include="Communication\Internal Objects\Victim.cs" />
+    <Compile Include="Communication\Routing\DVLink.cs" />
+    <Compile Include="Communication\Routing\DVTable.cs" />
+    <Compile Include="Communication\Tools\Signal.cs" />
+    <Compile Include="Communication\Tools\Communication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\Routing\RoutingGraph.cs" />
+    <Compile Include="Communication\Tools\NetworkManager.cs" />
+    <Compile Include="Communication\Tools\WSSControlLink.cs" />
+    <Compile Include="Components\MouseDataBase.cs" />
+    <Compile Include="Components\Objects\AnnotationState.cs" />
+    <Compile Include="Components\Objects\PanoState.cs" />
+    <Compile Include="Components\Objects\Victim.cs" />
+    <Compile Include="Components\Shapes\ShapeBase.cs" />
+    <Compile Include="Components\Shapes\VictimShape.cs" />
+    <Compile Include="Controller\Control.cs" />
+    <Compile Include="Controller\WheeledControl.cs" />
+    <Compile Include="Exploration\Frontiers\Frontier.cs" />
+    <Compile Include="Exploration\Frontiers\FrontierDetection.cs" />
+    <Compile Include="Exploration\MultiAgent\MultiExp.cs" />
+    <Compile Include="Exploration\ObstacleAvoidance\FrontierOriented.cs" />
+    <Compile Include="Exploration\ObstacleAvoidance\Gaps.cs" />
+    <Compile Include="Exploration\ObstacleAvoidance\ModifiedVFH.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exploration\ObstacleAvoidance\MotionOriented.cs" />
+    <Compile Include="Exploration\ObstacleAvoidance\ObstacleResult.cs" />
+    <Compile Include="CustomMath\Base\Matrix.cs" />
+    <Compile Include="CustomMath\Base\Vector.cs" />
+    <Compile Include="CustomMath\Matrix2.cs" />
+    <Compile Include="CustomMath\Matrix3.cs" />
+    <Compile Include="CustomMath\Pose2D.cs" />
+    <Compile Include="CustomMath\Pose3D.cs" />
+    <Compile Include="CustomMath\TMatrix2D.cs" />
+    <Compile Include="CustomMath\Vector2.cs" />
+    <Compile Include="CustomMath\Vector3.cs" />
+    <Compile Include="CustomMath\Vector4.cs" />
+    <Compile Include="Exploration\Edge.cs" />
+    <Compile Include="Exploration\Line.cs" />
+    <Compile Include="Exploration\ObstacleAvoidance\ObstacleAvoidance.cs" />
+    <Compile Include="Exploration\ObstacleAvoidance\P3ATObsAvoidance.cs" />
+    <Compile Include="Exploration\PathPlannig\RRTConnect.cs" />
+    <Compile Include="Exploration\PathPlannig\RRTConnectManager.cs" />
+    <Compile Include="IDE\Base\BaseModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageProcessor\FrameRateCalculator.cs" />
+    <Compile Include="ImageProcessor\ImageFiltering.cs" />
+    <Compile Include="ImageProcessor\VictimController.cs" />
+    <Compile Include="ImageProcessor\VictimDetector.cs" />
+    <Compile Include="Localization\GridSLAM\Base\MotionModel.cs" />
+    <Compile Include="Localization\GridSLAM\Base\ProbabilityUtils.cs" />
+    <Compile Include="Localization\GridSLAM\GridSLAM.cs" />
+    <Compile Include="Localization\ScanMatchers\Base\Correlation.cs" />
+    <Compile Include="Localization\ScanMatchers\Base\IcpScanMatcher.cs" />
+    <Compile Include="Localization\ScanMatchers\Base\IScanMatchers.cs" />
+    <Compile Include="Localization\ScanMatchers\Base\MatchResult.cs" />
+    <Compile Include="Localization\ScanMatchers\Base\ScanObsevation.cs" />
+    <Compile Include="Localization\ScanMatchers\IdcScanMatcher.cs" />
+    <Compile Include="Localization\ScanMatchers\MbIcpScanMatcher.cs" />
+    <Compile Include="Localization\ScanMatchers\WeightedScanMatcher.cs" />
+    <Compile Include="Localization\IMULocalization.cs" />
+    <Compile Include="Mapping\IEGMap.cs" />
+    <Compile Include="Utils\DBHandler.cs" />
+    <Compile Include="Utils\FastRandom.cs" />
+    <Compile Include="Utils\HelperFunctions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\Tools\Packet.cs" />
+    <Compile Include="Utils\GMath\Circle.cs" />
+    <Compile Include="Utils\GMath\FlatRectangle.cs" />
+    <Compile Include="Utils\GMath\Line.cs" />
+    <Compile Include="Utils\GMath\MathExtentions.cs" />
+    <Compile Include="Utils\GMath\PartLine.cs" />
+    <Compile Include="Utils\GMath\Position2D.cs" />
+    <Compile Include="Utils\GMath\SpecialFunctions.cs" />
+    <Compile Include="Utils\GMath\Vector2D.cs" />
+    <Compile Include="Utils\GMath\XMath.cs" />
+    <Compile Include="Utils\Serializer\DotNetSerializer.cs" />
+    <Compile Include="Utils\Serializer\GoogleSerializer.cs" />
+    <Compile Include="Utils\Serializer\ISerializer.cs" />
+    <Compile Include="Utils\SignalLine.cs" />
+    <Compile Include="Utils\SonarInfo.cs" />
+    <Compile Include="Utils\SonarManager.cs" />
+    <Compile Include="Utils\USAREnumerations.cs" />
+    <Compile Include="Commons\Heap.cs" />
+    <Compile Include="Communication\External Commands\Encoder.cs" />
+    <Compile Include="Communication\External Commands\GroundTruth.cs" />
+    <Compile Include="Communication\External Commands\INS.cs" />
+    <Compile Include="Communication\External Commands\Laser.cs" />
+    <Compile Include="Communication\External Commands\MessageParser.cs" />
+    <Compile Include="Communication\External Commands\Odometry.cs" />
+    <Compile Include="Communication\External Commands\Sonar.cs" />
+    <Compile Include="Communication\External Commands\State.cs" />
+    <Compile Include="Communication\External Commands\VictRFID.cs" />
+    <Compile Include="Communication\Internal Commands\Drive.cs" />
+    <Compile Include="Communication\Tools\ImageServerLink.cs" />
+    <Compile Include="Communication\Tools\SimulationLink.cs" />
+    <Compile Include="Mapping\BresenhamParam.cs" />
+    <Compile Include="Mapping\EGMap.cs" />
+    <Compile Include="Mapping\EGrid.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\MathHelper.cs" />
+    <Compile Include="Utils\RobotInfo.cs" />
+    <Compile Include="Utils\USARConfig.cs" />
+    <Compile Include="Utils\USARConstant.cs" />
+    <Compile Include="Utils\USARLog.cs" />
+    <Compile Include="Utils\USARParser.cs" />
+    <Compile Include="Utils\ViewerInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\VRReport.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8206817F-CC9C-4621-8323-6FE9B0622188}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MRL.Loader</RootNamespace>
+    <AssemblyName>MRL.Loader</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SlimDX, Version=4.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=AMD64" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\ReportControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ReportControl.Designer.cs">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Shapes\SignalShape.cs" />
+    <Compile Include="Components\Widgets\RobotPathWidget.cs" />
+    <Compile Include="Components\Widgets\SignalWidget.cs" />
+    <Compile Include="ComStation\BaseStation.cs" />
+    <Compile Include="Forms\CamerasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CamerasForm.designer.cs">
+      <DependentUpon>CamerasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\RobotControlList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\RobotControlList.Designer.cs">
+      <DependentUpon>RobotControlList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGetDescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGetDescription.Designer.cs">
+      <DependentUpon>frmGetDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\GeoreferenceImageViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\GeoreferenceImageViewer.Designer.cs">
+      <DependentUpon>GeoreferenceImageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\GeoreferenceImageViewer_ResultRegion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\MouseData.cs" />
+    <Compile Include="Components\RobotControl_KeyPart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Shapes\AnnotationShape.cs" />
+    <Compile Include="Components\Shapes\GoalPointShape.cs" />
+    <Compile Include="Components\Shapes\ImageShape.cs" />
+    <Compile Include="Components\Shapes\MissionShape.cs" />
+    <Compile Include="Components\Shapes\RobotPath.cs" />
+    <Compile Include="Components\Shapes\RobotShape.cs" />
+    <Compile Include="Components\Shapes\TargetShape.cs" />
+    <Compile Include="Components\Widgets\AnnotationWidget.cs" />
+    <Compile Include="Components\Widgets\ComStationWidget.cs" />
+    <Compile Include="Components\Widgets\GoalPointsWidget.cs" />
+    <Compile Include="Components\Widgets\ImageWidget.cs" />
+    <Compile Include="Components\Widgets\IWidget.cs" />
+    <Compile Include="Components\Widgets\MapWidget.cs" />
+    <Compile Include="Components\Widgets\MissionWidget.cs" />
+    <Compile Include="Components\Widgets\RobotWidget.cs" />
+    <Compile Include="Components\Widgets\ScaleBarWidget.cs" />
+    <Compile Include="Components\Widgets\TargetWidget.cs" />
+    <Compile Include="Components\Widgets\VictimWidget.cs" />
+    <Compile Include="Components\Widgets\WidgetBase.cs" />
+    <Compile Include="Components\Widgets\WidgetList.cs" />
+    <Compile Include="Forms\frmBaseStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBaseStation.Designer.cs">
+      <DependentUpon>frmBaseStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConfig.designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmServerInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmServerInformation.Designer.cs">
+      <DependentUpon>frmServerInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\getVictimInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\getVictimInfo.Designer.cs">
+      <DependentUpon>getVictimInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Components\RobotControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\RobotControl.designer.cs">
+      <DependentUpon>RobotControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\RobotImages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\RobotImages.Designer.cs">
+      <DependentUpon>RobotImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Components\ReportControl.resx">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CamerasForm.resx">
+      <DependentUpon>CamerasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\RobotControlList.resx">
+      <DependentUpon>RobotControlList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGetDescription.resx">
+      <DependentUpon>frmGetDescription.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\GeoreferenceImageViewer.resx">
+      <DependentUpon>GeoreferenceImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBaseStation.resx">
+      <DependentUpon>frmBaseStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmServerInformation.resx">
+      <DependentUpon>frmServerInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\getVictimInfo.resx">
+      <DependentUpon>getVictimInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\RobotControl.resx">
+      <DependentUpon>RobotControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\RobotImages.resx">
+      <DependentUpon>RobotImages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\A.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MRLRobot\MRLRobot.csproj">
+      <Project>{F91471A0-2937-4037-A626-F12CF662768D}</Project>
+      <Name>MRLRobot</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MRLUtilities\MRLUtilities.csproj">
+      <Project>{BD78D370-8C40-45DF-ADA4-6D509D7ABBAA}</Project>
+      <Name>MRLUtilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antena-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antena-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antena-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antena-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antena-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antena-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoaoPessoa.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image002.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JoaoPessoaLogo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

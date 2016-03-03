@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRLUtilities", "MRLUtilities\MRLUtilities.csproj", "{BD78D370-8C40-45DF-ADA4-6D509D7ABBAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRLLoader", "MRLLoader\MRLLoader.csproj", "{8206817F-CC9C-4621-8323-6FE9B0622188}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRLRobot", "MRLRobot\MRLRobot.csproj", "{F91471A0-2937-4037-A626-F12CF662768D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BIN", "BIN", "{8F12F57B-7062-4FF1-8A05-880A78F75820}"
+	ProjectSection(SolutionItems) = preProject
+		BIN\AForge.dll = BIN\AForge.dll
+		BIN\AForge.Imaging.dll = BIN\AForge.Imaging.dll
+		BIN\AForge.Math.dll = BIN\AForge.Math.dll
+		BIN\C5.dll = BIN\C5.dll
+		BIN\ClipperLibrary.dll = BIN\ClipperLibrary.dll
+		BIN\MathNet.Iridium.dll = BIN\MathNet.Iridium.dll
+		BIN\MathNet.Numerics.dll = BIN\MathNet.Numerics.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{BCEC3CE3-8601-4681-B374-96D7AE43F824}"
+	ProjectSection(SolutionItems) = preProject
+		Config\temporaryConfig.ini = Config\temporaryConfig.ini
+		Config\UDKUSAR.ini = Config\UDKUSAR.ini
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD78D370-8C40-45DF-ADA4-6D509D7ABBAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD78D370-8C40-45DF-ADA4-6D509D7ABBAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD78D370-8C40-45DF-ADA4-6D509D7ABBAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD78D370-8C40-45DF-ADA4-6D509D7ABBAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8206817F-CC9C-4621-8323-6FE9B0622188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8206817F-CC9C-4621-8323-6FE9B0622188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8206817F-CC9C-4621-8323-6FE9B0622188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8206817F-CC9C-4621-8323-6FE9B0622188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F91471A0-2937-4037-A626-F12CF662768D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91471A0-2937-4037-A626-F12CF662768D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91471A0-2937-4037-A626-F12CF662768D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91471A0-2937-4037-A626-F12CF662768D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F91471A0-2937-4037-A626-F12CF662768D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MRLRobot</RootNamespace>
+    <AssemblyName>MRL.Robot</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SlimDX, Version=4.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=AMD64">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exploration\BaseExploration.cs" />
+    <Compile Include="Exploration\LocalNoopExploration.cs" />
+    <Compile Include="Exploration\LocalObsExploration.cs" />
+    <Compile Include="Exploration\SemiAutonomous.cs" />
+    <Compile Include="Exploration\TreeNoopExploration.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Robot\AirRobot.cs" />
+    <Compile Include="Robot\ARDrone.cs" />
+    <Compile Include="Robot\BaseRobot.cs" />
+    <Compile Include="Robot\Kenaf.cs" />
+    <Compile Include="Robot\P3AT.cs" />
+    <Compile Include="Robot\pioneer3at_with_sensors.cs" />
+    <Compile Include="Robot\Skills\KenafSkillMgr.cs" />
+    <Compile Include="Robot\Skills\MissionRobot\KenafMission.cs" />
+    <Compile Include="Robot\Skills\MissionRobot\MissionBase.cs" />
+    <Compile Include="Robot\Skills\MissionRobot\P3ATMission.cs" />
+    <Compile Include="Robot\Skills\P3ATSkillMgr.cs" />
+    <Compile Include="Robot\Skills\RobotAction\BaseAction.cs" />
+    <Compile Include="Robot\Skills\RobotAction\KenafAction.cs" />
+    <Compile Include="Robot\Skills\RobotAction\P3ATAction.cs" />
+    <Compile Include="Robot\Skills\Skill.cs" />
+    <Compile Include="Robot\Skills\SkillManager.cs" />
+    <Compile Include="Robot\TeleMax.cs" />
+    <Compile Include="Robot\ValidatedRobot.cs" />
+    <Compile Include="Utils\WorldModel.cs" />
+    <Compile Include="Visualizer\Controls\SlimDxControl\MatrixCalculator.cs" />
+    <Compile Include="Visualizer\Controls\SlimDxControl\newD2DControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visualizer\Controls\SlimDxControl\newD2DControl.Designer.cs">
+      <DependentUpon>newD2DControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visualizer\Controls\SlimDxControl\NewSlimControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visualizer\Controls\SlimDxControl\NewSlimControl.Designer.cs">
+      <DependentUpon>NewSlimControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visualizer\Logger\Frame.cs" />
+    <Compile Include="Visualizer\util\DrawingObjects.cs" />
+    <Compile Include="Visualizer\util\StringDraw.cs" />
+    <Compile Include="Visualizer\util\Visualizer.cs" />
+    <Compile Include="Visualizer\util\WindowExtensions.cs" />
+    <Compile Include="Visualizer\Viz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visualizer\Viz.Designer.cs">
+      <DependentUpon>Viz.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MRLUtilities\MRLUtilities.csproj">
+      <Project>{BD78D370-8C40-45DF-ADA4-6D509D7ABBAA}</Project>
+      <Name>MRLUtilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visualizer\Controls\SlimDxControl\NewSlimControl.resx">
+      <DependentUpon>NewSlimControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visualizer\Viz.resx">
+      <DependentUpon>Viz.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\robot.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Visualizer\Image\robot.PNG" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
