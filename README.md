@@ -1,4 +1,4 @@
-# MyVR2014
+# Robocup 2014
 
 # Multi Robot Controller Application for RoboCup Resuce Virtual Robot League Released by MRL from Qazvin Azad University.
 An Application to manage Multi-Robots in USARSim UDK.
